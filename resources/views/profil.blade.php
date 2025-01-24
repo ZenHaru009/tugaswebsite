@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Profil Mahasiswa</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
     /* Navbar Styling */
     .navbar {
@@ -51,10 +51,14 @@
     /* Card Styling */
     .card {
       border: none;
-      border-radius: 15px;
-      overflow: hidden;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 20px; /* Membuat sudut card lebih besar */
+  
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px; /* Memberikan jarak antar card */
+  width: 1130px; /* Memperbesar lebar card */
+  height: 1000px; /* Memperbesar tinggi card */
+  
     }
 
     .card:hover {
@@ -92,7 +96,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
     <div class="container">
-      <a class="navbar-brand" href="#">SI5C</a>
+      <a class="navbar-brand" href="#">PROFIL TOKO</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -109,53 +113,31 @@
 
   <!-- Konten Utama -->
   <div class="container mt-5">
-    <h1 class="text-center mb-4">Profil Mahasiswa</h1>
+    <h1 class="text-center mb-4">Tentang Toko</h1>
     <div class="row">
       <!-- Profil 1 -->
       <div class="col-md-3">
         <div class="card">
-          <img src="{{ asset('storage/images/faqih1.jpg') }}" class="card-img-top" alt="Faqih Fikrulsyah Harun">
+          <img src="{{ asset('storage/images/banner.jpg') }}" class="card-img-top" alt="Faqih Fikrulsyah Harun">
           <div class="card-body text-center">
-            <h5 class="card-title">Faqih Fikrulsyah Harun</h5>
-            <p class="card-text">NIM: 220102071</p>
+            <h5 class="card-title">The Ambon Manise Shop</h5>
+            <p class="card-text">The Ambon Manise Shop merupakan salah satu pusat oleholeh khas Maluku yang terletak di Kota Ambon. 
+        Toko ini dikenal sebagai tempat yang menyediakan berbagai produk yang mencerminkan budaya dan kekayaan alam Maluku.
+        Mengunjungi Maluku tidak lengkap tanpa membawa pulang oleh-oleh, sehingga keberadaan toko ini sangat penting bagi 
+        wisatawan yang ingin membawa pulang kenangan dari daerah Maluku.
+        Toko Oleh oleh khas maluku ini menawarkan beragam produk yang berkualitas,mulai dari Pakaian,Batik maluku,
+        Minyak kayu putih,makanan dll dan menjadikannya pilihan utama bagi pengunjung.
+        Toko Oleh oleh khas maluku ini menawarkan beragam produk yang berkualitas,mulai dari Pakaian,Batik maluku,
+        Minyak kayu putih,makanan dll dan menjadikannya pilihan utama bagi pengunjung.</p>
+        <P>Lokasi Toko oleh-oleh khas maluku the ambon manise shop di Jl. 
+          Cendrawasih No 63 A - Soya Kecil, Kelurahan Rijali, Ambon, 
+          The Ambon Manise Shop mudah diakses oleh wisatawan maupun penduduk lokal.
+          <P>
           </div>
         </div>
       </div>
 
-      <!-- Profil 2 -->
-      <div class="col-md-3">
-        <div class="card">
-          <img src="{{ asset('storage/images/user2.jpg') }}" class="card-img-top" alt="Sion Gunawan">
-          <div class="card-body text-center">
-            <h5 class="card-title">Sion Gunawan</h5>
-            <p class="card-text">NIM: 220102100</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Profil 3 -->
-      <div class="col-md-3">
-        <div class="card">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Foto Mahasiswa 3">
-          <div class="card-body text-center">
-            <h5 class="card-title">Purnama A Marasabassy</h5>
-            <p class="card-text">NIM: 34567890</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- Profil 4 -->
-      <div class="col-md-3">
-        <div class="card">
-          <img src="https://via.placeholder.com/150" class="card-img-top" alt="Foto Mahasiswa 4">
-          <div class="card-body text-center">
-            <h5 class="card-title">Dian Sumantri</h5>
-            <p class="card-text">NIM: 45678901</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+      
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

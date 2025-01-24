@@ -85,8 +85,8 @@
                 <input type="text" class="form-control" id="nama" name="nama" required>
             </div>
             <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <label for="nomor_rekening" class="form-label">Nomor Rekening</label>
+                <input type="text" class="form-control" id="nomor_rekening" name="nomor_rekening" required>
             </div>
             <div class="mb-3">
                 <label for="alamat" class="form-label">Alamat</label>
@@ -97,6 +97,7 @@
                 <select class="form-select" id="metode_pembayaran" name="metode_pembayaran" required>
                     <option value="Transfer Bank">Transfer Bank</option>
                     <option value="E-Wallet">E-Wallet</option>
+                    <option value="Midtrans">Midtrans</option>
                     <option value="COD">Cash on Delivery</option>
                 </select>
             </div>
@@ -108,4 +109,5 @@
         </form>
     </div>
 </body>
+
 </html>

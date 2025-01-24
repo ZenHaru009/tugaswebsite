@@ -58,13 +58,18 @@
         }
 
         /* Button Styling */
-        .btn-primary {
+        .btn-primary, .btn-link {
             background: linear-gradient(45deg, #007bff, #0056b3);
             border: none;
+            padding: 8px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: inline-block;
         }
 
-        .btn-primary:hover {
+        .btn-primary:hover, .btn-link:hover {
             background: #0056b3;
             transform: scale(1.05);
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
@@ -82,18 +87,11 @@
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
 
-        /* Positioning "Kembali" Button */
-        .back-button {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 1000;
-        }
+
     </style>
 </head>
 <body>
-    <!-- Button "Kembali" -->
-    <button class="btn btn-primary back-button" onclick="history.back()">Kembali</button>
+    
 
     <div class="container mt-5">
         <h1>Keranjang Belanja</h1>
@@ -150,6 +148,18 @@
                 </tfoot>
             </table>
         @endif
+
+        <!-- Tombol Bayar -->
+        @if(!empty($cart) && $total > 0)
+            <div class="text-center mt-4">
+                <a href="{{ route('pembayaran') }}" class="btn btn-success">Bayar</a>
+            </div>
+        @endif
+
+        <!-- Button Lihat Produk -->
+        <div class="text-center mt-4">
+            <a href="/produk" class="btn btn-primary">LIHAT PRODUK</a>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

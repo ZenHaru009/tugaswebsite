@@ -7,6 +7,7 @@ use App\Http\Controllers\ProdukController;
 use App\Http\Controllers\CartController;
 use App\Http\Controllers\PembayaranController;
 use App\Http\Controllers\KontakController;
+use App\Http\Controllers\AdminTokoController;
 use Illuminate\Support\Facades\Route;
 
 // Rute untuk pengguna yang belum login
@@ -60,6 +61,8 @@ Route::middleware(['auth'])->group(function() {
     
     // Rute ke halaman profil
     Route::get('/profil', [ProfilController::class, 'index']); // Tambahkan rute ini
+    Route::get('/produk', [ProdukController::class, 'index'])->name('produk');
+
 
     Route::get('/produk', [ProdukController::class, 'index']);
     Route::get('/lihat-harga', [ProdukController::class, 'lihatHarga']);
@@ -67,4 +70,12 @@ Route::middleware(['auth'])->group(function() {
 
     // Rute logout
     Route::get('/logout', [SesiController::class, 'logout']);
+
+    Route::get('/admin-toko', [AdminTokoController::class, 'index'])->name('admin-toko');
+    Route::get('/admin-toko', [ProdukController::class, 'adminIndex'])->name('admin.toko');
+    Route::post('/admin-toko/tambah-produk', [AdminTokoController::class, 'store'])->name('admin-toko.store');
+    Route::get('/produk/{produk}', [ProdukController::class, 'show'])->name('produk.show');
+    Route::delete('/admin-toko/produk/{produk}', [ProdukController::class, 'destroy'])->name('produk.destroy');
+
+
 });
